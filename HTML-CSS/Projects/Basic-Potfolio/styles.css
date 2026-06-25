@@ -1,0 +1,63 @@
+             h1{
+                display: flex;
+                justify-content: center;
+                color: white;
+            }
+
+            nav{                
+                display: flex;
+                gap:40px;
+                justify-content: center;
+                margin-bottom: 50px;
+                
+            }
+
+            div{
+                margin-bottom: 80px;
+            }           
+            
+            body{
+                background-color: black;
+            }
+
+
+           a{
+            display: flex;
+            background-color: black;
+            color: white;
+            border-radius: 5px ;
+            height: 30px;
+            width: 120px;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border: 1px solid white;
+           }
+
+           a:hover{                
+                background-color: white;
+                color: black ;
+                
+           }
+
+           p{
+            margin: 0;
+            font-size: 20px;
+            color: white;
+           }
+
+           h2{
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: white;
+           }
+           
+           h3{
+            color: white;
+            font-size: 22px;
+           }
+           ul{
+            font-size: 18px;
+            color: white;
+           }
