@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Subscribe Button</title>        
-    <style>
+    <title>Subscribe Button</title>   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">     
+        <style>
       .container{
         display: flex;
         align-items: center;
-        border: 1px solid black;
-        height:50px;
-        border-radius: 25px;
+        
       }
 
       .subButton{
@@ -16,20 +17,39 @@
         height:25px;
         border-radius: 12px;
         border:0px;
+        background-color: rgb(241, 3, 3);
+        color: white;
+        font-weight: bold;
+        font-family: Roboto,Arial;
+        font-size: 15px;
       }
+
 
     </style>
   </head>
 
   <body>
     <div class="container">
-      <button class="likeButton">Like</button>
-      <button class="subButton">Subscribe</button>
-      <button class="bellButton">Bell</button>
+      <!-- <button class="likeButton">Like</button>
+      <button class="bellButton">Bell</button> -->
+      <button class="subButton" onclick="changeState()">Subscribe</button>
+      
     </div>
     
     <script>
-
+      function changeState(){
+        button=document.querySelector('.subButton');
+        if(button.innerHTML==='Subscribe'){
+          button.innerHTML='Subscribed';
+          button.style.backgroundColor= 'rgb(241, 3, 3)';
+          button.style.color='rgb(231, 220, 220)';
+          button.style.backgroundColor='white';
+        }else{
+          button.innerHTML='Subscribe';
+          button.style.backgroundColor= 'rgb(241, 3, 3)';
+          button.style.color='white';
+        }
+      }
     </script>
   </body>
 </html>
