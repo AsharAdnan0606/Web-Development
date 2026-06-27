@@ -17,7 +17,7 @@
         height:25px;
         border-radius: 12px;
         border:0px;
-        background-color: rgb(241, 3, 3);
+        background-color: rgb(241, 3, 3);        
         color: white;
         font-weight: bold;
         font-family: Roboto,Arial;
@@ -40,14 +40,16 @@
       function changeState(){
         button=document.querySelector('.subButton');
         if(button.innerHTML==='Subscribe'){
-          button.innerHTML='Subscribed';
-          button.style.backgroundColor= 'rgb(241, 3, 3)';
+          button.innerHTML='Subscribed';        
           button.style.color='rgb(231, 220, 220)';
           button.style.backgroundColor='white';
+          button.style.border='1px solid rgb(233, 229, 229) ';
         }else{
           button.innerHTML='Subscribe';
           button.style.backgroundColor= 'rgb(241, 3, 3)';
           button.style.color='white';
+          button.style.border='0px';
+          
         }
       }
     </script>
