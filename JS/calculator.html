@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <title>Basic Calculator</title>
+  </head>
+
+  <body>
+    <div class="calculator-body">
+      <input class="outputScreen" type="text" placeholder="" readonly>
+      <button class="Btn" onclick="displayOutput('0')">0</button>
+      <button class="Btn" onclick="displayOutput('1')">1</button>
+      <button class="Btn" onclick="displayOutput('2')">2</button>
+      <button class="Btn" onclick="displayOutput('3')">3</button>
+      <button class="Btn" onclick="displayOutput('4')">4</button>
+      <button class="Btn" onclick="displayOutput('5')">5</button>
+      <button class="Btn" onclick="displayOutput('6')">6</button>
+      <button class="Btn" onclick="displayOutput('7')">7</button>
+      <button class="Btn" onclick="displayOutput('8')">8</button>
+      <button class="Btn" onclick="displayOutput('9')">9</button>
+      <button class="Btn" onclick="displayOutput('+')">+</button>
+      <button class="Btn" onclick="displayOutput('-')">-</button>
+      <button class="Btn" onclick="displayOutput('*')">*</button>
+      <button class="Btn" onclick="displayOutput('/')">/</button>
+      <button class="Btn">CE</button>
+      <button class="Btn">X</button>
+    </div>
+
+    <script>
+      function displayOutput(inp){
+        let out=document.querySelector('.outputScreen');
+        out.value=inp;
+
+      }
+    </script>
+
+  </body> 
+</html>
