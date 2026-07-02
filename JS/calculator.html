@@ -2,28 +2,95 @@
 <html>
   <head>    
     <title>Basic Calculator</title>
+    <style>
+      .calculator-body{                     
+        border:1px solid black;
+        width: 150px;
+        height: 285px;
+        padding: 15px;        
+        background-color: rgb(37, 36, 36);
+        border-radius: 5px;
+      }
+
+      .outputScreen{
+        /* margin:10px; */
+        height:35px;
+        width: 143px;
+        font-size:20px;
+        margin-bottom: 15px;
+      }
+
+      .Btn{
+        height:32px;
+        background-color: rgb(173, 171, 171);
+        border:none;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .button-grid{
+        display: grid;
+        grid-template-columns: 40px 40px 40px;
+        grid-column-gap: 15px;
+        grid-row-gap:8px;        
+      }
+
+      .operator{
+        background-color:rgb(99, 207, 171);
+      }
+        
+      .cross{
+        background-color: rgb(238, 60, 60);
+      }
+
+      .watermark{
+        background-color:rgb(37, 36, 36);
+        border:none;
+        color:aliceblue;
+        font-size: 12px;
+        font-style: italic;
+        text-align: left;
+      }
+
+      body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      } 
+
+      html{
+        height: 100%;
+      }
+      
+    </style>
   </head>
 
   <body>
+    
     <div class="calculator-body">
       <input class="outputScreen" type="text" placeholder='' readonly>
-      <button class="Btn" onclick="displayOutput('0')">0</button>
-      <button class="Btn" onclick="displayOutput('1')">1</button>
-      <button class="Btn" onclick="displayOutput('2')">2</button>
-      <button class="Btn" onclick="displayOutput('3')">3</button>
-      <button class="Btn" onclick="displayOutput('4')">4</button>
-      <button class="Btn" onclick="displayOutput('5')">5</button>
-      <button class="Btn" onclick="displayOutput('6')">6</button>
-      <button class="Btn" onclick="displayOutput('7')">7</button>
-      <button class="Btn" onclick="displayOutput('8')">8</button>
-      <button class="Btn" onclick="displayOutput('9')">9</button>
-      <button class="Btn" onclick=" chooseOperation('+'), displayOutput('+')  ">+</button>
-      <button class="Btn" onclick=" chooseOperation('-') , displayOutput('-') ">-</button>
-      <button class="Btn" onclick="chooseOperation('*'), displayOutput('*') ">*</button>
-      <button class="Btn" onclick=" chooseOperation('/'), displayOutput('/') ">/</button>
-      <button class="Btn" onclick="reset()">CE</button>
-      <button class="Btn" onclick="cancelInput()">X</button>
-      <button class="Btn" onclick="calculate()" >=</button>
+      <div class="button-grid">
+        <button class="Btn" onclick="displayOutput('0')">0</button>
+        <button class="Btn" onclick="displayOutput('1')">1</button>
+        <button class="Btn operator" onclick=" chooseOperation('+'), displayOutput('+')  ">+</button>
+        <button class="Btn" onclick="displayOutput('2')">2</button>
+        <button class="Btn" onclick="displayOutput('3')">3</button>
+        <button class="Btn operator" onclick=" chooseOperation('-') , displayOutput('-') ">-</button>
+        <button class="Btn" onclick="displayOutput('4')">4</button>
+        <button class="Btn" onclick="displayOutput('5')">5</button>
+        <button class="Btn operator" onclick="chooseOperation('*'), displayOutput('*') ">*</button>
+        <button class="Btn" onclick="displayOutput('6')">6</button>
+        <button class="Btn" onclick="displayOutput('7')">7</button>
+        <button class="Btn operator" onclick=" chooseOperation('/'), displayOutput('/') ">/</button>
+        <button class="Btn" onclick="displayOutput('8')">8</button>
+        <button class="Btn" onclick="displayOutput('9')">9</button>                                        
+        <button class="Btn" onclick="reset()">CE</button>
+        <button class="Btn cross" onclick="cancelInput()">X</button>
+        <button class="Btn" onclick="calculate()" >=</button>
+        <div class="watermark">Ashar Adnan</div>
+      </div>
+      
     </div>
 
     <script>
