@@ -2,67 +2,7 @@
 <html>
   <head>    
     <title>Basic Calculator</title>
-    <style>
-      .calculator-body{                     
-        border:1px solid black;
-        width: 150px;
-        height: 285px;
-        padding: 15px;        
-        background-color: rgb(37, 36, 36);
-        border-radius: 5px;
-      }
-
-      .outputScreen{        
-        height:35px;
-        width: 143px;
-        font-size:20px;
-        margin-bottom: 15px;
-      }
-
-      .Btn{
-        height:32px;
-        background-color: rgb(173, 171, 171);
-        border:none;
-        border-radius: 3px;
-        font-weight: bold;
-        font-size: 20px;
-      }
-      .button-grid{
-        display: grid;
-        grid-template-columns: 40px 40px 40px;
-        grid-column-gap: 15px;
-        grid-row-gap:8px;        
-      }
-
-      .operator{
-        background-color:rgb(99, 207, 171);
-      }
-        
-      .cross{
-        background-color: rgb(238, 60, 60);
-      }
-
-      .watermark{
-        background-color:rgb(37, 36, 36);
-        border:none;
-        color:aliceblue;
-        font-size: 12px;
-        font-style: italic;
-        text-align: left;
-      }
-
-      body{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      } 
-
-      html{
-        height: 100%;
-      }
-      
-    </style>
+    <link rel="stylesheet" href="calculator.css">
   </head>
 
   <body>
@@ -92,88 +32,7 @@
       
     </div>
 
-    <script>
-      let a=0,operation,b=0,res=0,operAvail=0,move=-1;            
-      let out=document.querySelector('.outputScreen');      
-      
-      function chooseOperation(inp){
-        operAvail++;
-        operation=inp;
-        move=0;
-      }
-
-      function reset(){            
-        a=0;b=0;
-        out.value='';        
-      }
-
-      function calculate(){
-        
-        a=Number(a);
-        b=Number(b);
-        if(operation==='+'){
-          a=a+b;
-        }else if(operation==='-'){
-          a=a-b;
-        }else if(operation==='*'){
-          a=a*b;
-        }else{
-          a=a/b;
-        }   
-
-        console.log(a);                    
-        out.value=a;
-        b=0;
-        operAvail=0;
-      }
-      
-      function cancelInput(){
-        let str=out.value;
-        out.value=str.slice(0,-1);
-        if(move===1){
-          if(b){
-            b=0;
-          }else{
-            a=0;
-          }
-          
-        }
-      }
-    
-      function displayOutput(inp){     
-        if((a===0 && operAvail) || (b===0 && operAvail>1)){
-          if(b===0 && operAvail>1){
-            operAvail=1;
-          }else{
-            operAvail=0;
-          }
-          
-          return;
-        }
-        if(out.value===''){
-          out.value=inp;
-        }else{
-          out.value+=inp;
-        }
-
-        if(operAvail>1){
-          calculate();
-          return;
-        }
-
-        if(inp>=0 && inp<=9){  
-          move=1;        
-          if(!operAvail){
-            a+=inp;
-            console.log(`a=${a}`);
-          }else{
-            b+=inp;                         
-            console.log(`b=${b}`);            
-          }        
-        }        
-      }      
-
-    </script>
+    <script src="calculator.js"></script>
 
   </body> 
 </html>
