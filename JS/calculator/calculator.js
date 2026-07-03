@@ -1,7 +1,11 @@
-let a=0,operation,b=0,res=0,operAvail=0,move=-1;            
+let a=0,operation,b=0,operAvail=0,move=-1;            
       let out=document.querySelector('.outputScreen');      
       
       function chooseOperation(inp){
+
+        if(operAvail>0){
+          calculate();
+        }
         operAvail++;
         operation=inp;
         move=0;
@@ -59,11 +63,6 @@ let a=0,operation,b=0,res=0,operAvail=0,move=-1;
           out.value=inp;
         }else{
           out.value+=inp;
-        }
-
-        if(operAvail>1){
-          calculate();
-          return;
         }
 
         if(inp>=0 && inp<=9){  
