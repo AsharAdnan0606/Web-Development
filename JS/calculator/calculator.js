@@ -1,7 +1,28 @@
 let a=0,operation,b=0,operAvail=0,move=-1;            
-      let out=document.querySelector('.outputScreen');      
-      
+let out=document.querySelector('.outputScreen');      
 
+document.body.addEventListener("keydown",(event)=>{
+  let key=event.key;
+  console.log(key);
+  if(key==='+' || key==='-' || key==='*' || key==='/'){    
+    chooseOperation(key);
+    displayOutput(key);        
+  }
+  else if((key>='0' && key<='9')){    
+    displayOutput(key);
+  }
+
+  else if (key==='Enter'){
+    calculate();
+  }
+
+  else if (key==='Backspace'){
+    cancelInput();
+  }
+  
+
+});
+    
       //this choose operation func helps solving the chain operator problems
       function chooseOperation(inp){
 
@@ -29,11 +50,19 @@ let a=0,operation,b=0,operAvail=0,move=-1;
         }else if(operation==='*'){
           a=a*b;
         }else{
-          a=a/b;
-        }   
-
+          if(b===0){
+            out.value='ERROR';            
+          }else{
+            a=a/b;
+          }
+          
+        }         
         console.log(a);                    
-        out.value=a;
+        if(out.value!='ERROR'){
+          out.value=a;
+        }else{
+          a=0;
+        }
         b=0;
         operAvail=0;
       }
