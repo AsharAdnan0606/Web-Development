@@ -1,6 +1,8 @@
 let a=0,operation,b=0,operAvail=0,move=-1;            
       let out=document.querySelector('.outputScreen');      
       
+
+      //this choose operation func helps solving the chain operator problems
       function chooseOperation(inp){
 
         if(operAvail>0){
