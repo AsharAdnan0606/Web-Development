@@ -1,0 +1,16 @@
+#stats{
+        white-space: pre-line;        
+      }
+
+      .start-button{
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      .move-show{
+        margin-top: 15px;
+        border:1px solid black;
+        width: 250px;
+        height: 100px;
+        
+      }
