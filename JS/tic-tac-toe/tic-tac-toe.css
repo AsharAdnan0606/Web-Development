@@ -1,0 +1,29 @@
+.tic-tac-toe-grid{
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  /* border: 1px solid black; */
+  justify-content: center;
+}
+
+.general-cell{
+  border: 1px solid black;
+  height: 80px;
+}
+
+.cell1,.cell4,.cell3,.cell6{
+  border:0px;
+  border-bottom: 1px solid black;
+}
+
+.cell2,.cell5{
+  border-top: 0px;  
+}
+
+.cell7,.cell8,.cell9{
+  border: 0px;
+}
+
+.cell8{
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
