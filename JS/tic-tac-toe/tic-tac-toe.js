@@ -1,12 +1,27 @@
-let grid=['1','2','3','4','5','6','7','8','9'];
-console.log(grid);
+let grid=['','','','','','','','',''];
+//console.log(grid);
+let totalmoves=0;
 
 function makemove(index){
-  grid[index]='X';
-  displayGrid();
-  console.log(grid);
+  if(grid[index]===''){
+    grid[index]='X';
+    computermove();
+    displayGrid();
+    console.log(grid);
+  }
 };
 
+
+
+function computermove(){
+  for(let i=0 ; i<grid.length ; i++){
+    let cell=grid[i];
+    if(cell!='X' && cell!='O'){
+      grid[i]='O';
+      break;
+    }
+  }
+}
 
 displayGrid();
 function displayGrid(){
