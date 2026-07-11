@@ -76,7 +76,7 @@ function displayGrid(){
         Tic Tac Toe
       </h1>
       <div class="tic-tac-toe-grid">
-        <div class="general-cell cell1" onclick="makemove(0) getDisplay(0)">${getDisplay(grid[0])}</div>
+        <div class="general-cell cell1" onclick="makemove(0)">${getDisplay(grid[0])}</div>
         <div class="general-cell cell2" onclick="makemove(1)">${getDisplay(grid[1])}</div>
         <div class="general-cell cell3" onclick="makemove(2)">${getDisplay(grid[2])}</div>
         <div class="general-cell cell4" onclick="makemove(3)">${getDisplay(grid[3])}</div>
