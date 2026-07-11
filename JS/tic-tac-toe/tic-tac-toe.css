@@ -1,3 +1,4 @@
+
 .tic-tac-toe-grid{
   display: grid;
   grid-template-columns: 80px 80px 80px;
@@ -26,4 +27,24 @@
 .cell8{
   border-right: 1px solid black;
   border-left: 1px solid black;
+}
+
+h1{
+  font-size: 50px;
+}
+
+.starting-layout,.game-layout{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.general-button{
+  width: 120px;
+  height:120px;
+  border: 1px solid black;
+  border-radius: 60px;
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
 }
