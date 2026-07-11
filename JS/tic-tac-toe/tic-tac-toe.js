@@ -41,6 +41,10 @@ function checkwinner(){
 
 function gameover(){  
   displayGrid();
+  let winnerdisplay=document.querySelector('.initial-winner');
+  //console.log(document.body);
+  winnerdisplay.classList.add('final-winner');
+
   let buttons=document.querySelectorAll('.general-cell');
   buttons.forEach((button)=>{
     button.removeAttribute('onclick');
@@ -92,9 +96,10 @@ function displayGrid(){
         <div class="general-cell cell7" onclick="makemove(6)">${getDisplay(grid[6])}</div>
         <div class="general-cell cell8" onclick="makemove(7)">${getDisplay(grid[7])}</div>
         <div class="general-cell cell9" onclick="makemove(8)">${getDisplay(grid[8])}</div>
-        <div class="winner">winner: ${winner} </div>            
+
       </div>
-      <button class="general-button" onclick="reset()">RESET</button>
+      <div class="initial-winner">Winner: ${winner} </div>   
+      <button class="general-button reset-button" onclick="reset()">RESET</button>
     </div>
   `;
 
