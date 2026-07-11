@@ -7,13 +7,16 @@
 }
 
 .general-cell{
-  border: 1px solid black;
+  border: 2px solid black;
   height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cell1,.cell4,.cell3,.cell6{
   border:0px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 .cell2,.cell5{
@@ -25,8 +28,8 @@
 }
 
 .cell8{
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
 }
 
 h1{
@@ -47,4 +50,14 @@ h1{
   font-size: 30px;
   font-family:'Times New Roman', Times, serif;
   font-weight: bold;
+}
+
+.tick-move-image{  
+  height:57px;
+  width:57px;
+}
+
+.cross-move-image{  
+  height:50px;
+  width:50px;
 }
