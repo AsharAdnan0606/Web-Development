@@ -1,6 +1,6 @@
 let grid=['','','','','','','','',''];
 //console.log(grid);
-let totalmoves=0 , firstdisplay=true , winner='' , lastmove=0;
+let totalmoves=0 , firstdisplay=true , winner='' , lastmove=0,cpumakingmove=0;
 
 function reset(){
   grid=['','','','','','','','',''];
@@ -9,22 +9,22 @@ function reset(){
 }
 
 function makemove(index){
-  if(grid[index]===''){
-    grid[index]='X';
-    totalmoves++;
-    lastmove=0;
-    if(checkwinner()){
-      gameover();         
-      return;               
+  if(!cpumakingmove){
+    if(grid[index]===''){
+      grid[index]='X';
+      totalmoves++;
+      lastmove=0;
+      if(checkwinner()){
+        gameover();         
+        return;               
+      }
+      displayGrid();
+      console.log(grid);    
+      setTimeout( computermove, 1000);
+      cpumakingmove=1;
     }
-    displayGrid();
-    console.log(grid);    
-    setTimeout( computermove, 1000);
-    
-    // displayGrid();
-  
-    
   }
+  
 };
 
 function checkwinner(){
@@ -63,6 +63,7 @@ function computermove(){
         return;
       }
       displayGrid();
+      cpumakingmove=0;
       break;
     }
   }
