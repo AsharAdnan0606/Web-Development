@@ -2,6 +2,12 @@ let grid=['','','','','','','','',''];
 //console.log(grid);
 let totalmoves=0 , firstdisplay=true , winner='' , lastmove=0;
 
+function reset(){
+  grid=['','','','','','','','',''];
+  totalmoves=0 ; firstdisplay=true ; winner='' ; lastmove=0;
+  displayGrid();
+}
+
 function makemove(index){
   if(grid[index]===''){
     grid[index]='X';
@@ -80,6 +86,7 @@ function displayGrid(){
       <div class="general-cell cell9" onclick="makemove(8)">${grid[8]}</div>
       <div class="winner">winner: ${winner} </div>            
     </div>
+    <button onclick="reset()">reset</button>
   `;
   
 }
