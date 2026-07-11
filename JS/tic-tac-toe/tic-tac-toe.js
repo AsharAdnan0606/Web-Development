@@ -15,17 +15,15 @@ function makemove(index){
     lastmove=0;
     if(checkwinner()){
       gameover();         
-      return;         
-    }
-    computermove();
-    lastmove=1;
-    if(checkwinner()){
-      gameover();
-      return;
+      return;               
     }
     displayGrid();
+    console.log(grid);    
+    setTimeout( computermove, 1000);
+    
+    // displayGrid();
   
-    console.log(grid);
+    
   }
 };
 
@@ -58,9 +56,17 @@ function computermove(){
     if(cell!='X' && cell!='O'){
       totalmoves++;
       grid[i]='O';
+      console.log(grid);
+      lastmove=1;
+      if(checkwinner()){
+        gameover();
+        return;
+      }
+      displayGrid();
       break;
     }
   }
+
 }
 
 
