@@ -105,9 +105,9 @@ function displayGrid(){
 
   function getDisplay(inp){
     if(inp==='X'){
-      return `<img class="tick-move-image" src=tick.png>`
+      return `<img class="tick-move-image" src=images/tick.png>`
     }else if(inp==='O'){
-       return `<img class="cross-move-image" src=cross.png>`
+       return `<img class="cross-move-image" src=images/cross.png>`
     }else{
       return "";
     }
