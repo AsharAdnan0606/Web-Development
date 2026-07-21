@@ -4,12 +4,18 @@
   </head>
 
   <body>
-    <button>Buy1</button>    
-    <button>Buy1</button>    
-    <button>Buy1</button>    
+    <button data-product-id="1" class="btn">Buy1</button>    
+    <button data-product-id="2" class="btn">Buy2</button>    
+    <button data-product-id="3" class="btn">Buy3</button>    
 
     <script>
+      let arr=[];
       
+      document.querySelectorAll('.btn').forEach((product)=>{
+        product.addEventListener('click',()=>{
+          console.log(product.dataset.productId);
+        })
+      })
     </script>
   </body>
 </html>
